@@ -1,0 +1,18 @@
+Description: do not install dateparse into /usr/bin
+Origin: vendor
+Forwarded: not-needed
+Author: Ansgar Burchardt <ansgar@debian.org>
+Reviewed-by: gregor herrmann <gregoa@debian.org>
+Last-Update: 2023-02-05
+
+--- a/Build.PL
++++ b/Build.PL
+@@ -35,7 +35,7 @@
+                       'Test::More' => 0,
+                     },
+    recommends => { 'Date::Calc' => 0 },
+-   script_files => [ 'scripts/dateparse' ],
++#   script_files => [ 'scripts/dateparse' ],
+    license => 'perl',
+    create_readme => 1,
+    meta_merge => {
